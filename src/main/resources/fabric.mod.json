@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "hopliteautopet",
+  "version": "${version}",
+  "name": "HopliteAutoPet",
+  "description": "",
+  "authors": [
+    "byteful"
+  ],
+  "contact": {
+    "repo": "https://github.com/byteful/HopliteAutoPet"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.byteful.mod.hopliteautopet.HopliteAutoPetMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
