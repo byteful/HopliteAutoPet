@@ -25,10 +25,15 @@ public class ActionBarMixin {
         final ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player == null || !player.getInventory().isEmpty() || player.getVehicle() == null) return;
 
-        final String msg = message.getString();
-        if ((msg.startsWith("Time to drop: ") || msg.equals("SNEAK or JUMP to drop")) && System.currentTimeMillis() - lastPetted > 30_000) {
+        final String msg = message.getString().trim();
+        if (isBattleBusMessage(msg) && System.currentTimeMillis() - lastPetted > 30_000) {
             sendDropItemPacket();
             lastPetted = System.currentTimeMillis();
         }
+    }
+
+    @Unique
+    private static boolean isBattleBusMessage(String msg) {
+        return msg.startsWith("Time to drop: ") || msg.startsWith("Players can drop in ") || msg.equals("SNEAK or JUMP to drop");
     }
 }
