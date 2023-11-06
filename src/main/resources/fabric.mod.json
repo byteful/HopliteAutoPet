@@ -3,13 +3,16 @@
   "id": "hopliteautopet",
   "version": "${version}",
   "name": "HopliteAutoPet",
-  "description": "",
+  "description": "This mod automatically pets the dragon (battle bus) at the beginning of a solo or teams battle royale game. It simply executes the drop action (similar to pressing 'Q') and tells the server to \"pet the dragon\" without any user input required.",
   "icon": "assets/hopliteautopet/icon.png",
   "authors": [
     "byteful"
   ],
   "contact": {
-    "repo": "https://github.com/byteful/HopliteAutoPet"
+    "homepage": "https://github.com/byteful/HopliteAutoPet",
+    "sources": "https://github.com/byteful/HopliteAutoPet",
+    "issues": "https://github.com/byteful/HopliteAutoPet/issues",
+    "email": "info@byteful.me"
   },
   "license": "All-Rights-Reserved",
   "environment": "*",

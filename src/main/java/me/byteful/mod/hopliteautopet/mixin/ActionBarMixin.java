@@ -23,9 +23,10 @@ public class ActionBarMixin {
         if (!isOnHoplite()) return;
 
         final ClientPlayerEntity player = MinecraftClient.getInstance().player;
-        if (player == null || !player.getInventory().isEmpty()) return;
+        if (player == null || !player.getInventory().isEmpty() || player.getVehicle() == null) return;
 
-        if (message.getString().startsWith("Time to drop: ") && System.currentTimeMillis() - lastPetted > 30_000) {
+        final String msg = message.getString();
+        if ((msg.startsWith("Time to drop: ") || msg.equals("SNEAK or JUMP to drop")) && System.currentTimeMillis() - lastPetted > 30_000) {
             sendDropItemPacket();
             lastPetted = System.currentTimeMillis();
         }
