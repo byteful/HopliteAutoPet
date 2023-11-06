@@ -4,6 +4,7 @@
   "version": "${version}",
   "name": "HopliteAutoPet",
   "description": "",
+  "icon": "assets/hopliteautopet/icon.png",
   "authors": [
     "byteful"
   ],
@@ -17,6 +18,9 @@
       "me.byteful.mod.hopliteautopet.HopliteAutoPetMod"
     ]
   },
+  "mixins": [
+    "hopliteautopet.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

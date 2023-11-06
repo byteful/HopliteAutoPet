@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.byteful.mod.hopliteautopet.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "ActionBarMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

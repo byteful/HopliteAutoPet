@@ -9,6 +9,7 @@ public class HopliteAutoPetMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Hello from Hoplite AutoPet!");
+        LOGGER.info("Starting Hoplite AutoPet Mod...");
+        // Not much to this mod! Very lightweight.
     }
 }
